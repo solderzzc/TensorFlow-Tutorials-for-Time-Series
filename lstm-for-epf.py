@@ -16,7 +16,7 @@ BATCH_SIZE = 100
 PRINT_STEPS = TRAINING_STEPS / 100
 
 dateparse = lambda dates: pd.datetime.strptime(dates, '%d/%m/%Y %H:%M')
-rawdata = pd.read_csv("./input/ElectricityPrice/RealMarketPriceDataPT.csv", 
+rawdata = pd.read_csv("./RealMarketPriceDataPT.csv", 
                    parse_dates={'timeline': ['date', '(UTC)']}, 
                    index_col='timeline', date_parser=dateparse)
 
@@ -24,7 +24,7 @@ rawdata = pd.read_csv("./input/ElectricityPrice/RealMarketPriceDataPT.csv",
 X, y = load_csvdata(rawdata, TIMESTEPS, seperate=False)
 
 
-regressor = learn.TensorFlowEstimator(model_fn=lstm_model(TIMESTEPS, RNN_LAYERS, DENSE_LAYERS), 
+regressor = learn.Estimator(model_fn=lstm_model(TIMESTEPS, RNN_LAYERS, DENSE_LAYERS), 
                                       n_classes=0,
                                       verbose=1,  
                                       steps=TRAINING_STEPS, 
