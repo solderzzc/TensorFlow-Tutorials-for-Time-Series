@@ -1,5 +1,5 @@
 # PNN TensorFlow Pilot Notes
-1. p21
+1. Server = p21
 2. Code changes made to lstm-for-epf.py, lstm_predictor.py 
 3. tensorflow-0.12.1
 
