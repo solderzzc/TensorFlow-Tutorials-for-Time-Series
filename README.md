@@ -1,3 +1,9 @@
+# PNN TensorFlow Pilot Notes
+1. p21
+2. Code changes made to lstm-for-epf.py, lstm_predictor.py 
+3. tensorflow-0.12.1
+
+
 # TensorFlow Tutorial for Time Series Prediction
 
 This tutorial is designed to easily learn TensorFlow for time series prediction. 
